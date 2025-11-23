@@ -86,7 +86,17 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"MPSS/EFS/DHMS/PIL", 0x86700000, 0x06C00000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"RAM Partition",     0x8D300000, 0x00D00000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
     {"Display Reserved",  0x8e000000, 0x00800000, AddMem, MEM_RES, WRITE_THROUGH,MaxMem, WRITE_THROUGH},
-    {"RAM Partition",     0x8e800000, 0x51800000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    //{"RAM Partition",     0x8e800000, 0x51800000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+
+    /* RAM partition regions */
+    {"RAM Partition",     0x8cb00000, 0x01500000, AddMem, SYS_MEM, SYS_MEM_CAP,  Conv,   WRITE_BACK_XN},
+    /* Avoid Display Reserved */
+    {"RAM Partition",     0x8e800000, 0x11700000, AddMem, SYS_MEM, SYS_MEM_CAP,  Conv,   WRITE_BACK_XN},
+    /* carveout */
+    {"RAM Partition",     0xa0000000, 0x10000000, AddMem, SYS_MEM, SYS_MEM_CAP,  Conv,   WRITE_BACK_XN},
+    /* carveout */
+    {"RAM Partition",     0xc0000000, 0x30000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+
 
     /* Terminator for MMU */
     {"Terminator", 0, 0, 0, 0, 0, 0, 0}};
