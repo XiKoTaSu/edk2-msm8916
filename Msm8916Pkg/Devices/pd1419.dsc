@@ -24,6 +24,6 @@
   gMsm8916PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|854
 
   # SmBios Information
-  gMsm8916PkgTokenSpaceGuid.PcdDeviceVendor|"Samsung"
+  gMsm8916PkgTokenSpaceGuid.PcdDeviceVendor|"vivo"
   gMsm8916PkgTokenSpaceGuid.PcdDeviceProduct|"vivo Y23L"
   gMsm8916PkgTokenSpaceGuid.PcdDeviceCodeName|"pd1419"
