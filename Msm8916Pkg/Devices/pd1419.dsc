@@ -7,7 +7,7 @@
   SUPPORTED_ARCHITECTURES        = AARCH64
   BUILD_TARGETS                  = DEBUG|RELEASE
   SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = Msm8916Pkg/Devices/j5nlte.fdf
+  FLASH_DEFINITION               = Msm8916Pkg/Devices/pd1419.fdf
 
 !include Msm8916Pkg/Msm8916Pkg.dsc
 
