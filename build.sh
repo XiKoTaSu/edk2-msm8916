@@ -8,8 +8,8 @@ export WORKSPACE=$PWD/workspace
 
 # not actually GCC5; it's GCC7 on Ubuntu 18.04.
 # anyways, start the build
-GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -s -n 0 -a AARCH64 -t GCC5 -p Msm8916Pkg/Devices/j5nlte.dsc
+GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -s -n 0 -a AARCH64 -t GCC5 -p Msm8916Pkg/Devices/pd1419.dsc
 
 # post-build packing
-gzip -c < "workspace/Build/Msm8916Pkg/DEBUG_GCC5/FV/MSM8916PKG_UEFI.fd" > "boot-j5nlte.img"||exit 1
-cat ImageResources/j5nlte.dtb >>boot-j5nlte.img||exit 1
+gzip -c < "workspace/Build/Msm8916Pkg/DEBUG_GCC5/FV/MSM8916PKG_UEFI.fd" > "boot-pd1419.img"||exit 1
+cat ImageResources/pd1419.dtb >>boot-pd1419.img||exit 1
